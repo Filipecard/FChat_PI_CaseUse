@@ -4,6 +4,7 @@ from django.db import models
 
 class Perfil(models.Model):
     nome = models.CharField(max_length=50)
+    amigos = models.ForeignKey("self")
 
 class Usuario(models.Model):
     email = models.EmailField(max_length=254)
